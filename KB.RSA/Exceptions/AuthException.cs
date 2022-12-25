@@ -1,14 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Runtime.Serialization;
 
 namespace KB.RSA.Exceptions
 {
-    internal class AuthException
+    [Serializable]
+    public class AuthException : Exception
     {
+        public AuthException() : base("Auth Exception") { }
+        public AuthException(string message) : base(message) { }
+        public AuthException(string message, Exception innerException) : base(message, innerException) { }
+        public AuthException(Exception innerException) : base("Auth Exception", innerException) { }
+        protected AuthException(SerializationInfo info, StreamingContext context) : base(info, context) { }
     }
 }
-
-//yetkilendirme hatası
