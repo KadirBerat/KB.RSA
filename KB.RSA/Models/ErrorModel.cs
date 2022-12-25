@@ -1,14 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace KB.RSA.Models
+﻿namespace KB.RSA.Models
 {
-    internal class ErrorModel
+    public class ErrorModel
     {
+        public string Message { get; set; }
+        public string Operation { get; set; }
+        public string Description { get; set; }
+        public Exception Error { get; set; }
     }
 }
-
-//hatalar için base model

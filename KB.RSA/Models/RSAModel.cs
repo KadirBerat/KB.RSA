@@ -1,14 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace KB.RSA.Models
+﻿namespace KB.RSA.Models
 {
-    internal class RSAModel
+    public class RSAModel
     {
+        public bool Result { get; set; }
+        public object Data { get; set; }
+        public string Message { get; set; }
     }
 }
-
-//şifreli ve şifresiz veriler için base model
