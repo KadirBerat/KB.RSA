@@ -1,16 +1,78 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
-  <PropertyGroup>
-    <TargetFramework>net6.0</TargetFramework>
-    <ImplicitUsings>enable</ImplicitUsings>
-    <Nullable>enable</Nullable>
-  </PropertyGroup>
+	<PropertyGroup>
+		<TargetFramework>net6.0</TargetFramework>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+		<SignAssembly>True</SignAssembly>
+		<AssemblyOriginatorKeyFile>Content\KB-RSA.snk</AssemblyOriginatorKeyFile>
+		<Title>KB RSA</Title>
+		<PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
+		<PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
+		<GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+		<PackageId>KB-RSA</PackageId>
+		<Authors>Kadir Berat Güventürk</Authors>
+		<Company>kadirguventurk</Company>
+		<Product>KB-RSA</Product>
+		<Version>1.0.5-alpha.221226</Version>
+		<Description>A classlibrary project released as nuget that makes it easy to use for key generation, encryption, and decryption with RSA.</Description>
+		<Copyright>Copyright 2022 kadirguventurk</Copyright>
+		<PackageProjectUrl>https://github.com/KadirBerat/KB.RSA</PackageProjectUrl>
+		<PackageReadmeFile>README.md</PackageReadmeFile>
+		<RepositoryUrl>https://github.com/KadirBerat/KB.RSA.git</RepositoryUrl>
+		<RepositoryType>git</RepositoryType>
+		<PackageTags>RSA .NET6</PackageTags>
+		<PackageReleaseNotes>
+			Migration to .net6 version started
+		</PackageReleaseNotes>
+		<NeutralLanguage>en</NeutralLanguage>
+		<PackageIcon>KB-RSA.png</PackageIcon>
+		<ApplicationIcon>KB-RSA.ico</ApplicationIcon>
+	</PropertyGroup>
 
-  <ItemGroup>
-    <Folder Include="Content\" />
-    <Folder Include="Database\DAL\Abstract\" />
-    <Folder Include="Database\DAL\Concrete\" />
-    <Folder Include="Database\DB\FileStore\" />
-  </ItemGroup>
+	<ItemGroup>
+		<Content Include="KB-RSA.ico" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<Folder Include="Database\DAL\Abstract\" />
+		<Folder Include="Database\DAL\Concrete\" />
+		<Folder Include="Database\DB\FileStore\" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<None Include="..\KB-RSA.png">
+			<Pack>True</Pack>
+			<PackagePath>\</PackagePath>
+		</None>
+		<None Include="..\LICENSE.txt">
+			<Pack>True</Pack>
+			<PackagePath>\</PackagePath>
+		</None>
+		<None Include="..\README.md">
+			<Pack>True</Pack>
+			<PackagePath>\</PackagePath>
+		</None>
+	</ItemGroup>
+
+	<ItemGroup>
+		<None Update="Content\KB-RSA.snk">
+			<CopyToOutputDirectory>Never</CopyToOutputDirectory>
+		</None>
+		<None Update="Content\LICENSE">
+			<Pack>True</Pack>
+			<PackagePath>\</PackagePath>
+		</None>
+		<None Update="Content\LICENSE.txt">
+			<Pack>True</Pack>
+			<PackagePath>\</PackagePath>
+			<CopyToOutputDirectory>Never</CopyToOutputDirectory>
+		</None>
+		<None Update="Content\README.md">
+			<Pack>True</Pack>
+			<PackagePath>\</PackagePath>
+			<CopyToOutputDirectory>Never</CopyToOutputDirectory>
+		</None>
+	</ItemGroup>
 
 </Project>
