@@ -4,7 +4,10 @@ namespace KB.RSA.Models
 {
     public class RSAKeyModel
     {
-        public RSAParameters publicKey { get; set; }
-        public RSAParameters privateKey { get; set; }
+        private RSAParameters? _publicKey = null;
+        private RSAParameters? _privateKey = null;
+
+        public RSAParameters? PublicKey { get => _publicKey; set => _publicKey = value; }
+        public RSAParameters? PrivateKey { get => _privateKey; set => _privateKey = value; }
     }
 }
